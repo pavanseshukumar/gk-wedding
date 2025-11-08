@@ -147,30 +147,30 @@ export function Hero() {
             className="rounded-[30px] object-cover object-center transition-transform duration-[1600ms] ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-105"
           />
           <div className="pointer-events-none absolute inset-0 rounded-[30px] border border-primary/15" />
-          <div className="absolute inset-x-5 bottom-5">
-            <div className="rounded-[26px] border border-primary/30 bg-background/70 px-5 py-4 shadow-[var(--shadow-soft)] backdrop-blur-soft">
+          <div className="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5">
+            <div className="rounded-[24px] border border-primary/30 bg-background/70 px-4 py-3 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:rounded-[26px] sm:px-5 sm:py-4">
               <div className="flex flex-col items-center gap-3 text-primary sm:flex-row sm:justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex size-10 items-center justify-center rounded-full bg-primary/15">
-                    <Timer className="size-5" />
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <span className="inline-flex size-9 items-center justify-center rounded-full bg-primary/15 sm:size-10">
+                    <Timer className="size-4.5 sm:size-5" />
                   </span>
                   <div className="text-left sm:text-center">
-                    <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
+                    <p className="text-[0.58rem] uppercase tracking-[0.28em] text-muted-foreground sm:text-xs sm:tracking-[0.35em]">
                       Countdown to Muhurtham
                     </p>
                   </div>
                 </div>
               </div>
-              <dl className="mt-4 grid grid-cols-2 gap-3 text-center font-heading text-xl text-foreground sm:grid-cols-4">
+              <dl className="mt-3 grid grid-cols-2 gap-2.5 text-center font-heading text-lg text-foreground sm:mt-4 sm:grid-cols-4 sm:gap-3 sm:text-xl">
                 {timeLeft.map(({ label, value }) => (
                   <div
                     key={label}
-                    className="flex flex-col items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 px-4 py-3 shadow-sm shadow-primary/15"
+                    className="flex flex-col items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 px-3.5 py-2.5 shadow-sm shadow-primary/15 sm:px-4 sm:py-3"
                   >
-                    <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-muted-foreground">
+                    <dt className="text-[0.58rem] uppercase tracking-[0.24em] text-muted-foreground sm:text-[0.65rem] sm:tracking-[0.28em]">
                       {label}
                     </dt>
-                    <dd className="mt-1 text-2xl sm:text-[2rem]">{value}</dd>
+                    <dd className="mt-0.5 text-xl sm:mt-1 sm:text-[2rem]">{value}</dd>
                   </div>
                 ))}
               </dl>
