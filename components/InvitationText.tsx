@@ -25,7 +25,7 @@ export function InvitationText() {
           సాదరంగా ఆహ్వానం • शुभ मंगलम्
         </p>
         <h2 className="mt-6 font-heading text-4xl leading-snug text-foreground sm:text-5xl">
-          “సప్తపది ప్రతి అడుగులో ప్రేమతో, అగ్ని వెలుగులో మన కొత్త జర్నీ స్టార్ట్ అవుతోంది.”
+          “సప్తపది ప్రతి అడుగులో ప్రేమతో, అగ్ని వెలుగులో మా కొత్త జర్నీ స్టార్ట్ అవుతోంది.”
         </h2>
         <motion.p
           initial={{ opacity: 0 }}
@@ -34,10 +34,7 @@ export function InvitationText() {
           transition={{ delay: 0.15, duration: 1 }}
           className="mt-8 text-base leading-relaxed text-muted-foreground sm:text-lg"
         >
-          Guided by elders, garlanded with marigolds, and serenaded by the sonorous
-          nadaswaram, our families warmly invite you to witness the kanyadaanam,
-          jeelakarra bellam, and the resplendent saptapadi as we seek your blessings
-          for a lifetime of dharma, artha, kama, and moksha.
+          With every sacred step of the Saptapadi and in the warm glow of the holy fire, we are stepping into a new chapter of our lives. Surrounded by blessings, love, and the promise of togetherness, our beautiful journey begins.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 12 }}

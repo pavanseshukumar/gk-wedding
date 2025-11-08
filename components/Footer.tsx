@@ -15,7 +15,7 @@ export function Footer() {
           సెలబ్రేట్ చేసుకోడానికి రాబోయే ఫ్రెండ్స్ & ఫ్యామ్ అందరికీ హార్ట్‌ఫెల్ట్ థాంక్స్.
         </p>
         <p className="max-w-2xl text-sm text-muted-foreground sm:text-base">
-        Your blessings will bring positive vibes to our new life. Heartfelt thanks to all the friends and family who will be joining us to celebrate this special day with us.
+        Your blessings will bring positive vibes to our new life. Heartfelt thanks to all the friends & fam who will be joining us to celebrate this special day with us.
         </p>
       </div>
     </footer>
