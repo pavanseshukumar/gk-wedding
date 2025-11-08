@@ -30,9 +30,11 @@ export function CoupleSpotlight() {
       id="couple"
       className="relative mt-24 rounded-[34px] border border-border/50 bg-card/85 px-6 py-20 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:px-10 lg:px-16 lg:py-24"
     >
-      <p className="mb-6 text-center text-[0.55rem] font-medium tracking-[0.42em] text-primary/70 sm:text-[0.6rem]">
-        శ్రీ రాస్తు, శుభమాస్తు, అవిఘ్నమస్తు
-      </p>
+      <div className="mb-6 flex justify-evenly text-[0.55rem] font-semibold tracking-[0.3em] text-primary sm:text-[0.6rem]">
+        <span>శ్రీ రాస్తు</span>
+        <span>శుభమాస్తు</span>
+        <span>అవిఘ్నమస్తు</span>
+      </div>
 
       <div className="flex flex-col gap-4 text-center">
         <motion.span
@@ -105,9 +107,11 @@ export function CoupleSpotlight() {
         ))}
       </div>
 
-      <p className="mt-12 text-center text-[0.55rem] font-medium tracking-[0.44em] text-muted-foreground/85 sm:text-[0.6rem]">
-        Sri Rastu, Subhamastu, Avighnamastu
-      </p>
+      <div className="mt-12 flex justify-evenly text-[0.55rem] font-semibold tracking-[0.32em] text-muted-foreground/85 sm:text-[0.6rem]">
+        <span>Sri Rastu</span>
+        <span>Subhamastu</span>
+        <span>Avighnamastu</span>
+      </div>
     </section>
   );
 }

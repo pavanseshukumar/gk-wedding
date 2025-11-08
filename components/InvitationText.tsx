@@ -8,9 +8,11 @@ export function InvitationText() {
       id="invitation"
       className="relative mt-24 rounded-[34px] border border-border/45 bg-card/85 px-6 py-20 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:px-10 lg:px-16 lg:py-24"
     >
-      <p className="mb-6 text-center text-[0.55rem] font-medium tracking-[0.42em] text-primary/70 sm:text-[0.6rem]">
-        శ్రీ రాస్తు, శుభమాస్తు, అవిఘ్నమస్తు
-      </p>
+      <div className="mb-6 flex justify-evenly text-[0.55rem] font-semibold tracking-[0.3em] text-primary sm:text-[0.6rem]">
+        <span>శ్రీ రాస్తు</span>
+        <span>శుభమాస్తు</span>
+        <span>అవిఘ్నమస్తు</span>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -55,9 +57,11 @@ export function InvitationText() {
         </motion.div>
       </motion.div>
 
-      <p className="mt-10 w-full text-center text-[0.55rem] font-medium tracking-[0.44em] text-muted-foreground/85 sm:text-[0.6rem]">
-        Sri Rastu, Subhamastu, Avighnamastu
-      </p>
+      <div className="mt-10 flex justify-evenly text-[0.55rem] font-semibold tracking-[0.32em] text-muted-foreground/85 sm:text-[0.6rem]">
+        <span>Sri Rastu</span>
+        <span>Subhamastu</span>
+        <span>Avighnamastu</span>
+      </div>
       <div className="pointer-events-none absolute inset-x-16 -bottom-8 hidden h-20 rounded-full bg-primary/15 blur-3xl md:block" />
     </section>
   );

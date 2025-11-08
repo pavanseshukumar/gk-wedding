@@ -41,9 +41,11 @@ const details = [
 export function Details() {
   return (
     <section id="details" className="mt-24 space-y-10">
-      <p className="text-center text-[0.55rem] font-medium tracking-[0.42em] text-primary/70 sm:text-[0.6rem]">
-        శ్రీ రాస్తు, శుభమాస్తు, అవిఘ్నమస్తు
-      </p>
+      <div className="flex justify-evenly text-[0.55rem] font-semibold tracking-[0.3em] text-primary sm:text-[0.6rem]">
+        <span>శ్రీ రాస్తు</span>
+        <span>శుభమాస్తు</span>
+        <span>అవిఘ్నమస్తు</span>
+      </div>
 
       <motion.div
         className="flex flex-col items-center gap-3 text-center"
@@ -114,9 +116,11 @@ export function Details() {
         ))}
       </div>
 
-      <p className="text-center text-[0.55rem] font-medium tracking-[0.44em] text-muted-foreground/85 sm:text-[0.6rem]">
-        Sri Rastu, Subhamastu, Avighnamastu
-      </p>
+      <div className="flex justify-evenly text-[0.55rem] font-semibold tracking-[0.32em] text-muted-foreground/85 sm:text-[0.6rem]">
+        <span>Sri Rastu</span>
+        <span>Subhamastu</span>
+        <span>Avighnamastu</span>
+      </div>
     </section>
   );
 }

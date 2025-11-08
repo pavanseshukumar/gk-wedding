@@ -129,9 +129,11 @@ export function GalleryCarousel() {
       id="gallery"
       className="mt-24 space-y-10 overflow-hidden rounded-[34px] border border-border/50 bg-card/85 p-6 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:p-10 lg:p-14"
     >
-      <p className="text-center text-[0.55rem] font-medium tracking-[0.42em] text-primary/70 sm:text-[0.6rem]">
-        శ్రీ రాస్తు, శుభమాస్తు, అవిఘ్నమస్తు
-      </p>
+      <div className="flex justify-evenly text-[0.55rem] font-semibold tracking-[0.3em] text-primary sm:text-[0.6rem]">
+        <span>శ్రీ రాస్తు</span>
+        <span>శుభమాస్తు</span>
+        <span>అవిఘ్నమస్తు</span>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 28 }}
@@ -211,9 +213,11 @@ export function GalleryCarousel() {
         ))}
       </div>
 
-      <p className="text-center text-[0.55rem] font-medium tracking-[0.44em] text-muted-foreground/85 sm:text-[0.6rem]">
-        Sri Rastu, Subhamastu, Avighnamastu
-      </p>
+      <div className="flex justify-evenly text-[0.55rem] font-semibold tracking-[0.32em] text-muted-foreground/85 sm:text-[0.6rem]">
+        <span>Sri Rastu</span>
+        <span>Subhamastu</span>
+        <span>Avighnamastu</span>
+      </div>
     </section>
   );
 }

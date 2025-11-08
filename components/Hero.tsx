@@ -37,8 +37,13 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative isolate overflow-hidden rounded-[40px] border border-border/50 bg-card/90 px-6 pb-24 pt-28 shadow-[var(--shadow-soft)] backdrop-blur-soft md:px-12 lg:grid lg:min-h-[80vh] lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-16 lg:pt-32"
+      className="relative isolate overflow-hidden rounded-[40px] border border-border/50 bg-card/90 px-6 pb-28 pt-28 shadow-[var(--shadow-soft)] backdrop-blur-soft md:px-12 lg:grid lg:min-h-[80vh] lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-16 lg:pt-32"
     >
+      <div className="absolute inset-x-6 top-6 z-20 flex justify-evenly text-[0.55rem] font-semibold tracking-[0.28em] text-primary sm:text-[0.6rem]">
+        <span>శ్రీ రాస్తు</span>
+        <span>శుభమాస్తు</span>
+        <span>అవిఘ్నమస్తు</span>
+      </div>
 
       <div className="absolute inset-0 -z-20">
         {/* <Image
@@ -173,6 +178,12 @@ export function Hero() {
           </div>
         </div>
       </motion.aside>
+
+      <div className="absolute inset-x-6 bottom-6 z-20 flex justify-evenly text-[0.55rem] font-semibold tracking-[0.28em] text-muted-foreground/80 sm:text-[0.6rem]">
+        <span>Sri Rastu</span>
+        <span>Subhamastu</span>
+        <span>Avighnamastu</span>
+      </div>
     </section>
   );
 }
