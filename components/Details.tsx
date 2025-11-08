@@ -10,6 +10,7 @@ const details = [
     time: "11:00 AM onwards",
     venue: "Terrace at Girish's family courtyard, Vijayawada",
     icon: Sunrise,
+    mapUrl: "https://maps.app.goo.gl/pZeAxVj8gn5RsKWi9",
   },
   {
     title: "Pellikoduku",
@@ -17,6 +18,7 @@ const details = [
     time: "10:00 AM onwards",
     venue: "Girish's family courtyard, Vijayawada",
     icon: Sunrise,
+    mapUrl: "https://maps.app.goo.gl/pZeAxVj8gn5RsKWi9",
   },
   {
     title: "Wedding Reception",
@@ -24,6 +26,7 @@ const details = [
     time: "07:00 PM onwards",
     venue: "Railway Club Function Hall, Vijayawada",
     icon: Music2,
+    mapUrl: "https://maps.app.goo.gl/aXyddkcDkhzqd6cg8",
   },
   {
     title: "Wedding Sumuhurtham",
@@ -31,6 +34,7 @@ const details = [
     time: "05:25 AM",
     venue: "Railway Club Function Hall, Vijayawada",
     icon: AlarmClock,
+    mapUrl: "https://maps.app.goo.gl/aXyddkcDkhzqd6cg8",
   },
 ] as const;
 
@@ -95,7 +99,7 @@ export function Details() {
                       {item.venue}
                     </span>
                     <a
-                      href="https://maps.app.goo.gl/4fapTmrprm7Vkg1v6"
+                      href={item.mapUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-2 inline-flex items-center gap-1 rounded-full border border-primary/40 px-3 py-1 text-[0.55rem] font-semibold uppercase tracking-[0.36em] text-primary transition hover:border-primary hover:bg-primary/10"
