@@ -146,10 +146,10 @@ export function GalleryCarousel() {
           Captured keepsakes
         </p>
         <h2 className="font-heading text-4xl text-foreground sm:text-5xl">
-          Glimpses of our joyful Telugu soiree
+          Glimpses of our joyful moments.
         </h2>
         <p className="text-base text-muted-foreground sm:text-lg">
-          From turmeric-hued laughter to the echo of mridangam beats—the ceremonies are framed in warm golds and rose-tinted memories.
+        These aren’t just frames, they’re memories we’re choosing to hold on to forever.
         </p>
       </motion.div>
 

@@ -81,7 +81,7 @@ export function Hero() {
             Girish <span className="text-primary">&</span> Kalyani
           </motion.h1>
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            invite you to their traditional Telugu Hindu wedding, where sacred mantras, jasmine
+            invite you to our traditional Telugu Hindu wedding, where sacred mantras, jasmine
             garlands, and the glowing agni kundam bless the promise of a shared tomorrow.
           </p>
         </div>

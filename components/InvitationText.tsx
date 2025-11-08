@@ -21,7 +21,7 @@ export function InvitationText() {
         transition={{ duration: 0.85, ease: [0.22, 1, 0.34, 1] }}
         className="mx-auto max-w-3xl text-center"
       >
-        <p className="text-[0.65rem] uppercase tracking-[0.48em] text-muted-foreground">
+        <p className="text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground">
           సాదరంగా ఆహ్వానం • शुभ मंगलम्
         </p>
         <h2 className="mt-6 font-heading text-4xl leading-snug text-foreground sm:text-5xl">
@@ -47,13 +47,13 @@ export function InvitationText() {
           className="mt-10 space-y-2 text-sm text-muted-foreground sm:text-base"
         >
           <p className="font-heading text-2xl text-primary sm:text-3xl">
-            Girish Dandiboyena & Kalyani Pandilla
+            {/* Girish Dandiboyena & Kalyani Pandilla */} Invited by
           </p>
-          <p>S/o Sri Gangaiah Dandiboyena & Smt. Sarojini Dandiboyena</p>
-          <p>D/o Sri Kondaiah Pandilla & Smt. Kondamma Pandilla</p>
+          <p>Sri Gangaiah Dandiboyena & Smt. Sarojini Dandiboyena</p>
+          {/* <p>D/o Sri Kondaiah Pandilla & Smt. Kondamma Pandilla</p>
           <p className="uppercase tracking-[0.35em] text-primary/80">
             November 22, 2025 · Vijayawada, Andhra Pradesh
-          </p>
+          </p> */}
         </motion.div>
       </motion.div>
 

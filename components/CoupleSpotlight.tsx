@@ -63,7 +63,7 @@ export function CoupleSpotlight() {
           transition={{ delay: 0.1, duration: 0.9 }}
           className="mx-auto max-w-3xl text-base text-muted-foreground sm:text-lg"
         >
-          From temple corridors to late-night chai breaks, every shared laugh, prayer, and playlist
+          From temple corridors to late-night conversations, every shared laugh, prayer, and playlist
           has led us to this mandapam moment.
         </motion.p>
       </div>

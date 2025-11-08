@@ -60,10 +60,10 @@ export function Details() {
         <h2 className="font-heading text-4xl text-foreground sm:text-5xl">
           Rituals woven through tradition
         </h2>
-        <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
+        {/* <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
           Arrive in traditional attire. Priests will guide each ritual while we
           cherish every blessing and joyous chorus from our loved ones.
-        </p>
+        </p> */}
       </motion.div>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
