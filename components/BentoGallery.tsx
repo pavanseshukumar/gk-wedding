@@ -1,5 +1,7 @@
 "use client";
 
+import { useMemo } from "react";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -11,53 +13,154 @@ type GalleryTile = {
   priority?: boolean;
 };
 
-const galleryTiles: GalleryTile[] = [
+const baseGalleryTiles: GalleryTile[] = [
   {
-    src: "https://images.unsplash.com/photo-1513863323965-57c31c9e8120?auto=format&fit=crop&w=1400&q=80",
-    alt: "Bride and groom showered with akshata during ritual",
+    src: "/images/1.JPG",
+    alt: "Portrait of Girish and Kalyani sharing a laugh during the pre-wedding shoot",
     colSpan: "md:col-span-7",
     rowSpan: "row-span-2",
     priority: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1505577058444-a3dab90d4253?auto=format&fit=crop&w=900&q=80",
-    alt: "Sacred kalash and mangalasnanam setup with flowers",
+    src: "/images/2.JPG",
+    alt: "Bride getting ready with delicate jewellery details",
     colSpan: "md:col-span-5",
     rowSpan: "row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?auto=format&fit=crop&w=900&q=80",
-    alt: "Brass lamps and temple bells adorning the mandapam",
+    src: "/images/3.JPG",
+    alt: "Groom adjusting his sherwani with a candid smile",
     colSpan: "md:col-span-4",
     rowSpan: "row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1580380720405-8d1a7c5210aa?auto=format&fit=crop&w=1200&q=80",
-    alt: "Bride and groom laughing during saptapadi ritual",
+    src: "/images/4.JPG",
+    alt: "Couple holding hands during the outdoor session",
     colSpan: "md:col-span-8",
     rowSpan: "row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&w=900&q=80",
-    alt: "Traditional South Indian feast served on banana leaf",
+    src: "/images/5.JPG",
+    alt: "Family celebrating with vibrant garlands",
     colSpan: "md:col-span-4",
     rowSpan: "row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1578924617441-612b03466e3b?auto=format&fit=crop&w=900&q=80",
-    alt: "Sacred fire and kalash setup for vedic rituals",
+    src: "/images/6.JPG",
+    alt: "Traditional decor with kalash and floral backdrop",
     colSpan: "md:col-span-5",
     rowSpan: "row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=900&q=80",
-    alt: "Henna decorated hands holding turmeric and kumkum",
+    src: "/images/7.JPG",
+    alt: "Close-up of mehendi adorned hands forming a heart",
     colSpan: "md:col-span-3",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/8.JPG",
+    alt: "Bride twirling in her saree during the golden hour",
+    colSpan: "md:col-span-6",
+    rowSpan: "row-span-2",
+  },
+  {
+    src: "/images/9.JPG",
+    alt: "Groom sharing a light moment with his best man",
+    colSpan: "md:col-span-6",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/10.JPG",
+    alt: "Candid moment of the couple under floral canopy",
+    colSpan: "md:col-span-5",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/11.JPG",
+    alt: "Intricate wedding decor with jasmine strings",
+    colSpan: "md:col-span-4",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/12.JPG",
+    alt: "Bride and groom exchanging garlands joyfully",
+    colSpan: "md:col-span-8",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/13.JPG",
+    alt: "Parents blessing the couple with akshata",
+    colSpan: "md:col-span-4",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/14.JPG",
+    alt: "Kids playing around the mandapam with sparklers",
+    colSpan: "md:col-span-3",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/16.JPG",
+    alt: "Bride adjusting her bangles beside a mirror",
+    colSpan: "md:col-span-6",
+    rowSpan: "row-span-2",
+  },
+  {
+    src: "/images/17.JPG",
+    alt: "Groom receiving blessings from elders",
+    colSpan: "md:col-span-5",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/18.JPG",
+    alt: "Wide shot of the mandapam decorated with lights",
+    colSpan: "md:col-span-4",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/19.JPG",
+    alt: "Couple laughing during the reception toast",
+    colSpan: "md:col-span-7",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/20.JPG",
+    alt: "Bridal accessories neatly arranged on silk cloth",
+    colSpan: "md:col-span-5",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/22.JPG",
+    alt: "Close-up of turmeric and kumkum thalis",
+    colSpan: "md:col-span-4",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/23.JPG",
+    alt: "Couple posing with their parents on the stage",
+    colSpan: "md:col-span-6",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/images/24.JPG",
+    alt: "Aerial view of guests seated for the ceremony",
+    colSpan: "md:col-span-5",
+    rowSpan: "row-span-2",
+  },
+  {
+    src: "/images/25.JPG",
+    alt: "Sangeet performance with friends cheering",
+    colSpan: "md:col-span-4",
     rowSpan: "row-span-1",
   },
 ];
 
 export function BentoGallery() {
+  const galleryTiles = useMemo(
+    () => shuffle(baseGalleryTiles).slice(0, 15),
+    []
+  );
+
   return (
     <section
       id="gallery"
@@ -109,5 +212,14 @@ export function BentoGallery() {
       </div>
     </section>
   );
+}
+
+function shuffle<T>(array: T[]): T[] {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
 }
 

@@ -1,12 +1,12 @@
 import { CoupleSpotlight } from "@/components/CoupleSpotlight";
 import { Lamp } from "lucide-react";
 
-import { BentoGallery } from "@/components/BentoGallery";
 import { Details } from "@/components/Details";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { InvitationText } from "@/components/InvitationText";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { GalleryCarousel } from "@/components/GalleryCarousel";
 
 const navigation = [
   { href: "#invitation", label: "Invitation" },
@@ -48,7 +48,7 @@ export default function HomePage() {
       <InvitationText />
       <CoupleSpotlight />
       <Details />
-      <BentoGallery />
+      <GalleryCarousel />
       <Footer />
     </main>
   );

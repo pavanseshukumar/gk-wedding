@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { Flower2, CalendarDays, ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
 
+import mainImage from "@/public/images/main1.jpg";
+
 import { Button } from "@/components/ui/button";
 
 const textReveal = {
@@ -35,17 +37,18 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative isolate overflow-hidden rounded-[40px] border border-border/50 bg-card/90 px-6 pb-20 pt-24 shadow-[var(--shadow-soft)] backdrop-blur-soft md:px-12 lg:grid lg:min-h-[80vh] lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-16 lg:pt-28"
+      className="relative isolate overflow-hidden rounded-[40px] border border-border/50 bg-card/90 px-6 pb-24 pt-28 shadow-[var(--shadow-soft)] backdrop-blur-soft md:px-12 lg:grid lg:min-h-[80vh] lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-16 lg:pt-32"
     >
+
       <div className="absolute inset-0 -z-20">
-        <Image
+        {/* <Image
           src="https://images.unsplash.com/photo-1617957743091-4bb4c44ff17f?auto=format&fit=crop&w=1600&q=80"
           alt="Sacred hindu wedding mandap with traditional decor"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
-        />
+        /> */}
         <span className="absolute inset-0 bg-gradient-to-br from-[#fef1d0]/75 via-background/70 to-transparent dark:from-[#2a120d]/75 dark:via-[#1e0d0a]/70" />
         <span className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,196,124,0.55)_0,transparent_68%)] dark:bg-[radial-gradient(circle_at_top,rgba(120,48,20,0.65)_0,transparent_72%)]" />
         <span className="absolute inset-0 bg-[linear-gradient(140deg,rgba(242,171,64,0.35)_0%,rgba(255,247,234,0)_60%)] dark:bg-[linear-gradient(150deg,rgba(156,68,28,0.55)_0%,rgba(28,14,11,0)_60%)]" />
@@ -88,7 +91,7 @@ export function Hero() {
               <ArrowRight className="size-5" />
             </a>
           </Button>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <a
               href={calendarLink}
               target="_blank"
@@ -113,7 +116,7 @@ export function Hero() {
             <Button
               asChild
               size="sm"
-              className="rounded-full bg-primary px-5 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-primary-foreground shadow-glow transition hover:bg-primary/90"
+              className="w-full rounded-full bg-primary px-5 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-primary-foreground shadow-glow transition hover:bg-primary/90 sm:w-auto"
             >
               <a href={calendarLink} target="_blank" rel="noreferrer">
                 Save the date
@@ -130,17 +133,17 @@ export function Hero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.25, duration: 0.9, ease: [0.19, 1, 0.22, 1] }}
       >
-        <div className="relative h-[480px] w-full overflow-hidden rounded-[36px] border border-border/50 bg-background/75 p-1 shadow-[var(--shadow-soft)] backdrop-blur-soft dark:bg-background/50 sm:h-[520px] lg:h-[620px]">
+        <div className="relative h-[480px] w-full overflow-hidden rounded-[36px] border border-border/50 bg-background/5 p-1 shadow-[var(--shadow-soft)] backdrop-blur-soft dark:bg-background/50 sm:h-[520px] lg:h-[620px]">
           <Image
-            src="https://images.unsplash.com/photo-1505935428862-770b6f24f629?auto=format&fit=crop&w=900&q=80"
-            alt="Sacred fire with wedding offerings"
+            src={mainImage}
+            alt="Girish and Kalyani wedding portrait"
             fill
             sizes="(min-width: 1024px) 420px, 100vw"
             className="rounded-[30px] object-cover object-center transition-transform duration-[1600ms] ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-105"
           />
           <div className="pointer-events-none absolute inset-0 rounded-[30px] border border-primary/15" />
           <div className="absolute inset-x-5 bottom-5">
-            <div className="rounded-[26px] border border-primary/30 bg-background/90 px-5 py-4 shadow-[var(--shadow-soft)] backdrop-blur-soft">
+            <div className="rounded-[26px] border border-primary/30 bg-background/70 px-5 py-4 shadow-[var(--shadow-soft)] backdrop-blur-soft">
               <div className="flex flex-col items-center gap-3 text-primary sm:flex-row sm:justify-between">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex size-10 items-center justify-center rounded-full bg-primary/15">

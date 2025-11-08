@@ -15,7 +15,7 @@ const details = [
     title: "Pellikoduku",
     date: "22 November 2025",
     time: "10:00 AM onwards",
-    venue: "Terrace at Girish's family courtyard, Vijayawada",
+    venue: "Girish's family courtyard, Vijayawada",
     icon: Sunrise,
   },
   {
@@ -37,6 +37,10 @@ const details = [
 export function Details() {
   return (
     <section id="details" className="mt-24 space-y-10">
+      <p className="text-center text-[0.55rem] font-medium tracking-[0.42em] text-primary/70 sm:text-[0.6rem]">
+        శ్రీ రాస్తు, శుభమాస్తు, అవిఘ్నమస్తు
+      </p>
+
       <motion.div
         className="flex flex-col items-center gap-3 text-center"
         initial={{ opacity: 0, y: 24 }}
@@ -68,7 +72,7 @@ export function Details() {
               duration: 0.7,
               ease: [0.25, 1, 0.5, 1],
             }}
-            className="group relative overflow-hidden rounded-[30px] border border-border/55 bg-card/85 p-7 shadow-[var(--shadow-soft)] backdrop-blur-soft"
+            className="group relative overflow-hidden rounded-[30px] border border-border/55 bg-card/85 p-7 shadow-[var(--shadow-soft)] backdrop-blur-soft transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2 hover:scale-[1.02]"
           >
             <div className="absolute -right-10 -top-14 size-36 rounded-full bg-primary/10 blur-3xl transition-all duration-500 group-hover:scale-125 group-hover:bg-primary/25 dark:bg-primary/20" />
             <div className="relative flex flex-col gap-4">
@@ -86,15 +90,29 @@ export function Details() {
                   
                 <div className="mt-1.5 flex items-start gap-2 text-xs text-primary sm:text-sm">
                   <MapPin className="mt-[1px] size-[1.2rem] flex-shrink-0 text-primary" />
-                  <span className="max-w-[18ch] text-left uppercase tracking-[0.2em] text-primary/90 sm:max-w-[22ch]">
-                    {item.venue}
-                  </span>
+                  <div className="flex flex-col items-start">
+                    <span className="max-w-[18ch] text-left uppercase tracking-[0.2em] text-primary/90 sm:max-w-[22ch]">
+                      {item.venue}
+                    </span>
+                    <a
+                      href="https://maps.app.goo.gl/4fapTmrprm7Vkg1v6"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-2 inline-flex items-center gap-1 rounded-full border border-primary/40 px-3 py-1 text-[0.55rem] font-semibold uppercase tracking-[0.36em] text-primary transition hover:border-primary hover:bg-primary/10"
+                    >
+                      Click here
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </motion.article>
         ))}
       </div>
+
+      <p className="text-center text-[0.55rem] font-medium tracking-[0.44em] text-muted-foreground/85 sm:text-[0.6rem]">
+        Sri Rastu, Subhamastu, Avighnamastu
+      </p>
     </section>
   );
 }

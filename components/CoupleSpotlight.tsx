@@ -4,22 +4,23 @@ import { motion } from "framer-motion";
 import { Sparkles, Heart } from "lucide-react";
 import Image from "next/image";
 
+import groomImage from "@/public/images/groom.jpg";
+import brideImage from "@/public/images/bride.jpg";
+
 const profiles = [
   {
     name: "Girish Dandiboyena",
     role: "Srivaru",
     family: "S/o Sri Gangaiah Dandiboyena & Smt. Sarojini Dandiboyena",
     location: "Vijayawada · Andhra Pradesh",
-    image:
-      "https://images.unsplash.com/photo-1519750157634-b6d493a0f77b?auto=format&fit=crop&w=900&q=80",
+    image: groomImage,
   },
   {
     name: "Kalyani Pandilla",
     role: "Srimathi",
     family: "D/o Sri Kondaiah Pandilla & Smt. Kondamma Pandilla",
     location: "Bengaluru · Karnataka",
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
+    image: brideImage,
   },
 ] as const;
 
@@ -27,8 +28,12 @@ export function CoupleSpotlight() {
   return (
     <section
       id="couple"
-      className="relative mt-24 rounded-[34px] border border-border/50 bg-card/85 px-6 py-16 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:px-10 lg:px-16 lg:py-20"
+      className="relative mt-24 rounded-[34px] border border-border/50 bg-card/85 px-6 py-20 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:px-10 lg:px-16 lg:py-24"
     >
+      <p className="mb-6 text-center text-[0.55rem] font-medium tracking-[0.42em] text-primary/70 sm:text-[0.6rem]">
+        శ్రీ రాస్తు, శుభమాస్తు, అవిఘ్నమస్తు
+      </p>
+
       <div className="flex flex-col gap-4 text-center">
         <motion.span
           initial={{ opacity: 0, y: 12 }}
@@ -79,7 +84,7 @@ export function CoupleSpotlight() {
                   alt={`${profile.name} portrait`}
                   fill
                   sizes="(min-width: 1024px) 260px, 45vw"
-                  className="object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(0.25,1,0.5,1)] [transform:scaleX(-1)_scale(1.12)] group-hover:[transform:scaleX(-1)_scale(1.24)]"
                 />
               </div>
               <div className="space-y-3">
@@ -99,6 +104,10 @@ export function CoupleSpotlight() {
           </motion.article>
         ))}
       </div>
+
+      <p className="mt-12 text-center text-[0.55rem] font-medium tracking-[0.44em] text-muted-foreground/85 sm:text-[0.6rem]">
+        Sri Rastu, Subhamastu, Avighnamastu
+      </p>
     </section>
   );
 }
