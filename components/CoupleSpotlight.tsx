@@ -31,8 +31,8 @@ export function CoupleSpotlight() {
       className="relative mt-24 rounded-[34px] border border-border/50 bg-card/85 px-6 py-20 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:px-10 lg:px-16 lg:py-24"
     >
       <div className="mb-6 flex justify-evenly text-[0.55rem] font-semibold tracking-[0.3em] text-primary sm:text-[0.6rem]">
-        <span>శ్రీ రాస్తు</span>
-        <span>శుభమాస్తు</span>
+        <span>శ్రీరస్తు</span>
+        <span>శుభమస్తు</span>
         <span>అవిఘ్నమస్తు</span>
       </div>
 

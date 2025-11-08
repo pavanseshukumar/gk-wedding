@@ -130,8 +130,8 @@ export function GalleryCarousel() {
       className="mt-24 space-y-10 overflow-hidden rounded-[34px] border border-border/50 bg-card/85 p-6 shadow-[var(--shadow-soft)] backdrop-blur-soft sm:p-10 lg:p-14"
     >
       <div className="flex justify-evenly text-[0.55rem] font-semibold tracking-[0.3em] text-primary sm:text-[0.6rem]">
-        <span>శ్రీ రాస్తు</span>
-        <span>శుభమాస్తు</span>
+        <span>శ్రీరస్తు</span>
+        <span>శుభమస్తు</span>
         <span>అవిఘ్నమస్తు</span>
       </div>
 
