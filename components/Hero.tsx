@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Flower2, CalendarDays, ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
 
-import mainImage from "@/public/images/1.jpg";
+import mainImage from "@/public/images/1.JPG";
 
 import { Button } from "@/components/ui/button";
 
