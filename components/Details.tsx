@@ -5,7 +5,7 @@ import { AlarmClock, CalendarDays, MapPin, Music2, Sunrise } from "lucide-react"
 
 const details = [
   {
-    title: "Nalugu & Haldi",
+    title: "Haldi",
     date: "21 November 2025",
     time: "11:00 AM onwards",
     venue: "Terrace at Girish's family courtyard, Vijayawada",

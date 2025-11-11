@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Flower2, CalendarDays, ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
 
-import mainImage from "@/public/images/main1.jpg";
+import mainImage from "@/public/images/1.jpg";
 
 import { Button } from "@/components/ui/button";
 
@@ -21,9 +21,10 @@ const textReveal = {
 
 export function Hero() {
   const muhurtham = useMemo(() => new Date("2025-11-23T05:25:00+05:30"), []);
-  const [timeLeft, setTimeLeft] = useState(() => formatTimeLeft(muhurtham));
+  const [timeLeft, setTimeLeft] = useState<TimeUnit[] | null>(null);
 
   useEffect(() => {
+    setTimeLeft(formatTimeLeft(muhurtham));
     const timer = window.setInterval(() => {
       setTimeLeft(formatTimeLeft(muhurtham));
     }, 1000);
@@ -162,7 +163,7 @@ export function Hero() {
                 </div>
               </div>
               <dl className="mt-3 grid grid-cols-2 gap-2.5 text-center font-heading text-lg text-foreground sm:mt-4 sm:grid-cols-4 sm:gap-3 sm:text-xl">
-                {timeLeft.map(({ label, value }) => (
+                {(timeLeft ?? placeholderTimeLeft).map(({ label, value }) => (
                   <div
                     key={label}
                     className="flex flex-col items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 px-3.5 py-2.5 shadow-sm shadow-primary/15 sm:px-4 sm:py-3"
@@ -192,6 +193,13 @@ type TimeUnit = {
   label: string;
   value: string;
 };
+
+const placeholderTimeLeft: TimeUnit[] = [
+  { label: "Days", value: "--" },
+  { label: "Hours", value: "--" },
+  { label: "Minutes", value: "--" },
+  { label: "Seconds", value: "--" },
+];
 
 function formatTimeLeft(target: Date): TimeUnit[] {
   const now = new Date();

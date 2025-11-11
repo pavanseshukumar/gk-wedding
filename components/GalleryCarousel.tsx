@@ -10,109 +10,28 @@ type CarouselImage = {
   alt: string;
 };
 
-const baseImages: CarouselImage[] = [
-  {
-    src: "/images/1.JPG",
-    alt: "Portrait of Girish and Kalyani sharing a laugh during the pre-wedding shoot",
-  },
-  {
-    src: "/images/2.JPG",
-    alt: "Bride getting ready with delicate jewellery details",
-  },
-  {
-    src: "/images/3.JPG",
-    alt: "Groom adjusting his sherwani with a candid smile",
-  },
-  {
-    src: "/images/4.JPG",
-    alt: "Couple holding hands during the outdoor session",
-  },
-  {
-    src: "/images/5.JPG",
-    alt: "Family celebrating with vibrant garlands",
-  },
-  {
-    src: "/images/6.JPG",
-    alt: "Traditional decor with kalash and floral backdrop",
-  },
-  {
-    src: "/images/7.JPG",
-    alt: "Close-up of mehendi adorned hands forming a heart",
-  },
-  {
-    src: "/images/8.JPG",
-    alt: "Bride twirling in her saree during the golden hour",
-  },
-  {
-    src: "/images/9.JPG",
-    alt: "Groom sharing a light moment with his best man",
-  },
-  {
-    src: "/images/10.JPG",
-    alt: "Candid moment of the couple under floral canopy",
-  },
-  {
-    src: "/images/11.JPG",
-    alt: "Intricate wedding decor with jasmine strings",
-  },
-  {
-    src: "/images/12.JPG",
-    alt: "Bride and groom exchanging garlands joyfully",
-  },
-  {
-    src: "/images/13.JPG",
-    alt: "Parents blessing the couple with akshata",
-  },
-  {
-    src: "/images/14.JPG",
-    alt: "Kids playing around the mandapam with sparklers",
-  },
-  {
-    src: "/images/16.JPG",
-    alt: "Bride adjusting her bangles beside a mirror",
-  },
-  {
-    src: "/images/17.JPG",
-    alt: "Groom receiving blessings from elders",
-  },
-  {
-    src: "/images/18.JPG",
-    alt: "Wide shot of the mandapam decorated with lights",
-  },
-  {
-    src: "/images/19.JPG",
-    alt: "Couple laughing during the reception toast",
-  },
-  {
-    src: "/images/20.JPG",
-    alt: "Bridal accessories neatly arranged on silk cloth",
-  },
-  {
-    src: "/images/22.JPG",
-    alt: "Close-up of turmeric and kumkum thalis",
-  },
-  {
-    src: "/images/23.JPG",
-    alt: "Couple posing with their parents on the stage",
-  },
-  {
-    src: "/images/24.JPG",
-    alt: "Aerial view of guests seated for the ceremony",
-  },
-  {
-    src: "/images/25.JPG",
-    alt: "Sangeet performance with friends cheering",
-  },
+const imageNumbers = Array.from({ length: 31 }, (_, index) => index + 2); // 2 - 32 inclusive
 
-];
+const baseImages: CarouselImage[] = imageNumbers.map((number) => ({
+  src: `/images/${number}.jpg`,
+  alt: `Wedding memory ${number}`,
+}));
 
-const AUTOPLAY_INTERVAL = 6000;
+const AUTOPLAY_INTERVAL = 3000;
 
 export function GalleryCarousel() {
-  const images = useMemo(() => shuffle(baseImages).slice(0, 15), []);
+  const [images, setImages] = useState<CarouselImage[]>(() => baseImages.slice(0, 15));
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    setImages(() => shuffle(baseImages).slice(0, 15));
+  }, []);
+
+  useEffect(() => {
+    if (images.length === 0) {
+      return;
+    }
+
     const timer = window.setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, AUTOPLAY_INTERVAL);

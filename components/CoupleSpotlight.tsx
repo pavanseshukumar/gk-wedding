@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { Sparkles, Heart } from "lucide-react";
 import Image from "next/image";
 
-import groomImage from "@/public/images/groom.jpg";
-import brideImage from "@/public/images/bride.jpg";
+import groomImage from "@/public/images/spot-groom.jpg";
+import brideImage from "@/public/images/33.jpg";
 
 const heartPath =
   "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z";
@@ -76,8 +76,11 @@ export function CoupleSpotlight() {
 
       <div className="relative mt-12">
         <div className="grid gap-0 lg:grid-cols-2 lg:gap-6">
-          {profiles.map((profile, index) => (
-            <Fragment key={profile.name}>
+          {profiles.map((profile, index) => {
+            const isGroom = profile.role === "Srivaru";
+
+            return (
+              <Fragment key={profile.name}>
               <motion.article
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +96,11 @@ export function CoupleSpotlight() {
                       alt={`${profile.name} portrait`}
                       fill
                       sizes="(min-width: 1024px) 260px, 45vw"
-                      className="object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(0.25,1,0.5,1)] [transform:scaleX(-1)_scale(1.12)] group-hover:[transform:scaleX(-1)_scale(1.24)]"
+                    className={`object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${
+                      isGroom
+                        ? "[transform:scaleX(-1)_scale(1.02)_translateY(4px)] group-hover:[transform:scaleX(-1)_scale(1.08)_translateY(2px)]"
+                        : "[transform:scale(1.42)_translateY(18px)_translateX(-10px)] group-hover:[transform:scale(1.5)_translateY(12px)_translateX(-6px)]"
+                    }`}
                     />
                   </div>
                   <div className="space-y-3">
@@ -140,7 +147,8 @@ export function CoupleSpotlight() {
                 </motion.div>
               )}
             </Fragment>
-          ))}
+            );
+          })}
         </div>
 
         <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden -translate-x-1/2 transform lg:flex">
