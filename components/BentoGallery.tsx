@@ -15,7 +15,7 @@ type GalleryTile = {
 
 const baseGalleryTiles: GalleryTile[] = [
   {
-    src: "/images/1.JPG",
+    src: "/images/1.jpg",
     alt: "Portrait of Girish and Kalyani sharing a laugh during the pre-wedding shoot",
     colSpan: "md:col-span-7",
     rowSpan: "row-span-2",
