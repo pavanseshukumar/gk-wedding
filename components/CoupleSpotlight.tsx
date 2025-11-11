@@ -99,7 +99,7 @@ export function CoupleSpotlight() {
                     className={`object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${
                       isGroom
                         ? "[transform:scaleX(-1)_scale(1.02)_translateY(4px)] group-hover:[transform:scaleX(-1)_scale(1.08)_translateY(2px)]"
-                        : "[transform:scale(1.42)_translateY(18px)_translateX(-10px)] group-hover:[transform:scale(1.5)_translateY(12px)_translateX(-6px)]"
+                        : "[transform:scale(1.42)_translateY(26px)_translateX(-10px)] group-hover:[transform:scale(1.5)_translateY(20px)_translateX(-6px)]"
                     }`}
                     />
                   </div>
