@@ -5,18 +5,18 @@ import { AlarmClock, CalendarDays, MapPin, Music2, Sunrise } from "lucide-react"
 
 const details = [
   {
-    title: "Haldi",
-    date: "21 November 2025",
-    time: "11:00 AM onwards",
-    venue: "Terrace at Girish's family courtyard, Vijayawada",
+    title: "Nalugu & Pellikoduku",
+    date: "22 November 2025",
+    time: "8:00 AM onwards",
+    venue: "Girish's Family Courtyard (Ganga Bhavani Nilayam), Vijayawada",
     icon: Sunrise,
     mapUrl: "https://maps.app.goo.gl/pZeAxVj8gn5RsKWi9",
   },
   {
-    title: "Pellikoduku",
+    title: "Haldi ceremony",
     date: "22 November 2025",
-    time: "10:00 AM onwards",
-    venue: "Girish's family courtyard, Vijayawada",
+    time: "11:00 AM onwards",
+    venue: "Terrace at Ganga Bhavani Nilayam,  Vijayawada",
     icon: Sunrise,
     mapUrl: "https://maps.app.goo.gl/pZeAxVj8gn5RsKWi9",
   },
@@ -93,7 +93,7 @@ export function Details() {
                   <CalendarDays className="size-4 flex-shrink-0" />
                   <span>{item.date}{" "}{item.time}</span>
                 </div>
-                  
+
                 <div className="mt-1.5 flex items-start gap-2 text-xs text-primary sm:text-sm">
                   <MapPin className="mt-[1px] size-[1.2rem] flex-shrink-0 text-primary" />
                   <div className="flex flex-col items-start">
